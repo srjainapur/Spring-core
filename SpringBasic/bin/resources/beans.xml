@@ -1,0 +1,15 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<import resource="default_xml.xml"/>
+	
+	<bean id="employee" class="com.java.spring.bean.Employee" lazy-init="true" depends-on="address">
+		<property name="id" value="45506"/>
+		<property name="name" value="Satish"/>
+		<property name="lastName" value="Jainapur"/>
+		<property name="email" value="sjainapur@gmail.com"/>
+	</bean>
+	
+	
+</beans>
