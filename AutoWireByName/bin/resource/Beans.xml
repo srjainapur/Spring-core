@@ -1,0 +1,14 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <!-- Definition for textEditor bean -->
+   <bean id="textEditor" class="com.spring.autowire.byname.TextEditor" autowire="byName">
+   	<property name="name" value="Autowire by Name !!!!!!!"/>
+   </bean>
+   <bean id="spellCheckerrrr" class="com.spring.autowire.byname.SpellChecker"/>
+   <bean id="spellChecker" class="com.spring.autowire.byname.SpellChecker"/>
+</beans>

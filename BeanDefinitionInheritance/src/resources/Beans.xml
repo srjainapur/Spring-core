@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="beanTemplate" abstract="true">
+   	<property name = "message1" value="Default Message 1"/>
+   	<property name = "message2" value="Default Message 2"/>
+   	<property name = "message3" value="Default Message 3"/>
+   </bean>
+   
+   <bean id="helloWorld" class="com.spring.bean.def.inherit.HelloWorld"> 
+   	<property name="message1" value="Hello WOrld Message 1"/>
+   	<property name="message2" value="Hello WOrld Message 2"/>
+   </bean>
+   
+   <bean id="helloIndia" class="com.spring.bean.def.inherit.HelloIndia" parent="beanTemplate">
+   	<property name="message1" value="Hello India Message 1"/>
+   	<property name="message3" value="Hello India Message 3"/>
+   </bean>
+   
+</beans>
